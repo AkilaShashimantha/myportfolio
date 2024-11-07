@@ -1,0 +1,291 @@
+/*.circle-image {
+    width: 300px;
+    height: 60vh;
+    border-radius: 50%; 
+    background-image: url('images/img1.jpg'); 
+    background-size: cover;
+    background-position: center 70%; 
+
+  }
+  */
+  .circle-image {
+    width: 300px; 
+    height: 60vh; 
+    border-radius: 50%; 
+    background-image: url('images/img1.jpg'); 
+    background-size: cover;
+    background-position: center 70%; 
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px; 
+    font-size: 28px;
+    transition: all 1s ease; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .circle-image::after,
+  .circle-image::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 5px solid transparent; 
+    border-radius: 50%; 
+    transition: all 1s ease;
+    box-sizing: border-box;
+  }
+  
+  
+  .circle-image:hover {
+    box-shadow: 0px 0px 30px 10px rgba(249, 250, 251, 0.5); 
+  }
+  
+  
+  .circle-image:hover::before,
+  .circle-image:hover::after {
+    animation: color-change 5s linear infinite; 
+  }
+  
+ 
+  @keyframes color-change {
+    0% {
+      border-color: red;
+    }
+    25% {
+      border-color: yellow;
+    }
+    50% {
+      border-color: green;
+    }
+    75% {
+      border-color: blue;
+    }
+    100% {
+      border-color: purple;
+    }
+  }
+
+  .hr-animation {
+    border: none;
+    height: 2px; 
+    background: maroon; 
+    transition: background 0.5s ease;
+  }
+  
+  .hr-animation:hover {
+    background: linear-gradient(to right, maroon, pink); 
+    background-size: 200% 100%; 
+    background-position: left center;
+    animation: color-change2 0.5s forwards;
+  }
+  
+  @keyframes color-change2 {
+    0% {
+      background-position: left center;
+    }
+    100% {
+      background-position: right center;
+    }
+  }
+
+.image2{
+
+    width: 300px;
+    height: 50vh;
+    border-radius: 10%; 
+    background-image: url('images/img1.jpg'); 
+    background-size: cover;
+    background-position: center 70%; 
+
+}
+
+@media (min-width: 1025px) {
+    .image2 {
+      display: block;
+    }
+  }
+  
+  
+  @media (max-width: 1024px) {
+    .image2 {
+      display: none; 
+    }
+  }
+
+
+  .skill {
+    display: inline-block;
+    position: relative; 
+    padding: 10px 20px; 
+    color: #B4B4C4; 
+    font-size: 18px; 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    border: none; 
+    transition: color 0.5s ease;
+  }
+  
+  
+  .skill::after {
+    content: '';
+    position: absolute; 
+    bottom: 0;
+    left: 50%; 
+    width: 0%; 
+    height: 3px; 
+    background-color: white; 
+    transition: width 0.5s ease, left 0.5s ease;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); 
+    background-size: 200% 100%; 
+    background-position: right bottom; 
+  }
+  
+
+  .skill:hover {
+    color: #ff66b2; 
+  }
+  
+  .skill:hover::after {
+    width: 50%; 
+    left: 25%; 
+    animation: flow 1.5s linear infinite; 
+  }
+  
+  
+  @keyframes flow {
+    0% {
+      background-position: right bottom; 
+    }
+    100% {
+      background-position: left bottom;
+    }
+  }
+  
+  .service {
+    border: 2px solid #f7f5f5;
+    border-radius: 10px;
+  }
+
+  .service {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Smooth transition for border and background color */
+  }
+  
+  .service:hover {
+    background-color: #2e0518; /* Dark pink background color */
+    border-color: #9c1f4e; /* Dark pink border color */
+  }
+  .service:hover:nth-child(2) {
+    border-color: #ff3385; /* Lighter pink on hover */
+  }
+  
+  .service:hover:nth-child(3) {
+    border-color: #ff1a66; /* Even darker pink on hover */
+  }
+
+
+/* Styling for navigation buttons */
+.nav-button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #f9f9f9;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover effect */
+  .nav-button:hover {
+    color: white;
+    background-color: #3e0618;  /* Dark pink color */
+    border-color: #ffffff;
+    transform: translateY(-2px);  /* Slight lift effect */
+  }
+  
+  /* Create a smooth animation effect for the border */
+  .nav-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-image: radial-gradient(circle, #000000, #18050d, #230b19, #2e0d26, #360f36);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Activate the gradient effect when hovering */
+  .nav-button:hover::before {
+    opacity: 1;
+  }
+  
+  /* Active state (when the button is clicked) */
+  .nav-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  @font-face{
+    font-family: "Honey";
+src: url("font/HoneyScript-Light.ttf");
+}
+
+@font-face{
+    font-family: "Leiko-Regular";
+src: url("font/Leiko-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Tropikal-Bold";
+src: url("font/Tropikal-Bold.ttf");
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+
