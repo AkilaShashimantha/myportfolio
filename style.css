@@ -192,7 +192,33 @@
   .service:hover:nth-child(3) {
     border-color: #ff1a66; /* Even darker pink on hover */
   }
+  .service {
+    width: 20%;
+    height: 60vh;  /* or any other style for larger screens */
+  }
+  
+  @media (min-width: 900px) and (max-width: 1000px) {
+    .service {
+  width: 30%;
+  height: 60vh;  /* Example for a flex layout */
+    }
+  }
 
+  /* For screens more than 700px but less than 900px */
+  @media (min-width: 700px) and (max-width: 899px) {
+    .service {
+  width: 40%;
+  height: 60vh;  /* Example for a flex layout */
+    }
+  }
+  
+  /* For screens less than 400px */
+  @media (max-width: 699px) {
+    .service {
+      width: 40%;
+      height: 60vh;  /* Example to hide the service div on very small screens */
+    }
+  }
 
 /* Styling for navigation buttons */
 .nav-button {

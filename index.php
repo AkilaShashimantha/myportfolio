@@ -130,7 +130,7 @@ challenges and is eager to bring creative solutions as part of a team.</p>
 <div class=" row d-flex justify-content-center services">
 <div class=" col-12 d-flex justify-content-center"><h2 style=" color: white;">My Services</h2></div>
 <!-- service card -->
-<div class="col-lg-2 col-6 d-flex justify-content-center my-5 p-2 service">
+<div class="col-lg-2 col-6 col-md-4 d-flex justify-content-center my-5 p-2 service">
 <div class=" row">
 
 <div class="col-12 d-flex justify-content-center skill" ><h3 style=" color: white;">Web Design</h3></div>
