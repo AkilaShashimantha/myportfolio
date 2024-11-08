@@ -25,7 +25,12 @@
     justify-content: center;
     align-items: center;
   }
-  
+  @media (max-width: 450px) {
+    .circle-image {
+      height: 40vh; 
+      width: 300px;  
+    }
+  }
   
   .circle-image::after,
   .circle-image::before {
@@ -235,7 +240,7 @@
   
   /* Active state (when the button is clicked) */
   .nav-button:active {
-    transform: scale(0.98);
+    transform: scale(0.50);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
@@ -267,8 +272,15 @@ src: url("font/Tropikal-Bold.ttf");
 .waviy {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-  font-size: 60px;
+  font-size: 50px;
 }
+
+@media (max-width: 450px) {
+  .waviy {
+    font-size: 30px; /* Smaller font size for small screens */
+  }
+}
+
 .waviy span {
   font-family: 'Alfa Slab One', cursive;
   position: relative;
