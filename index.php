@@ -149,6 +149,38 @@ and also make websites with WordPress Themes as your wish. I always try to do my
 
 </div>
 
+<!-- Contact Me -->
+
+<div class=" col-12 d-flex justify-content-center " style=" background-color: black;" id="contactme">
+<div class=" row d-flex justify-content-center">
+
+<div class="col-12 d-flex justify-content-center"><h2 style=" color: white;">Contact Me</h2></div>
+
+<div class=" col-12 d-flex justify-content-center my-5" style=" background-color:#251e2b; border-radius: 20px;">
+    
+<div class=" row">
+
+<form action="contactProcess.php" method="post">
+
+<div class=" col-12 d-flex justify-content-center my-3">
+    <div class=" col-5 col-lg-6"><label for="" class=" form-label text-white">Enter Your Email</label></div>
+   <div class=" col-lg-12 col-10"> <input type="email" name="email" id="email" class=" form-control text-center" placeholder="youremail@gmail.com" required></div>
+</div>
+<div class=" col-12 d-flex justify-content-center ">
+<div class=" col-12"><Label class=" form-label text-white">Enter Your Message</Label></div>
+</div>
+<div class=" col-12">
+<textarea name="message" id="message" class=" form-control message-area col-12 my-3" placeholder="Enter your message here" required></textarea>
+</div>
+ <div class=" col-12 d-flex justify-content-center my-5"><button class=" btn btn-outline-primary col-8 col-lg-8" type="submit" name="send">Send</button></div>
+
+</form>
+</div>
+  
+</div>
+
+</div>
+</div>
 
 </div>
 </div>

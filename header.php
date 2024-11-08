@@ -25,11 +25,11 @@
 
 <div class=" col-lg-6 col-12" >
   <div class=" row">
-
+ 
   <div class=" col-3 col-lg-3 d-flex justify-content-center"><button class="  nav-button" data-target="#home">Home</button></div>
     <div class=" col-3 col-lg-3 d-flex justify-content-center"><button class="  nav-button" data-target="#aboutme">About me</button></div>
     <div class=" col-3 col-lg-3 d-flex justify-content-center"><button class=" nav-button "data-target="#services">Services</button></div>
-    <div class=" col-3 col-lg-3 d-flex justify-content-center p-0"><button class=" nav-button">Contact Me</button></div>
+    <div class=" col-3 col-lg-3 d-flex justify-content-center p-0"><button class=" nav-button" data-target="#contactme">Contact Me</button></div>
 
   </div>
 </div>
