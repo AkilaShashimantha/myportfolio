@@ -138,7 +138,7 @@ challenges and is eager to bring creative solutions as part of a team.</p>
 </div>
 
 <!-- service card details  -->
-<div class=" col-6 col-lg-4 offset-lg-4 offset-3 my-3 service">
+<div class=" col-8 col-lg-4 offset-lg-4 offset-2 my-3 service">
 
 <div class=" row">
 <div class=" col-12 d-flex justify-content-center skill">
