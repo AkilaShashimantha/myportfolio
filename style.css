@@ -18,7 +18,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    padding: 10px; 
+   /* padding: 10px;  */
     font-size: 28px;
     transition: all 1s ease; 
     display: flex;
@@ -192,33 +192,33 @@
   .service:hover:nth-child(3) {
     border-color: #ff1a66; /* Even darker pink on hover */
   }
-  .service {
+  /* .service {
     width: 20%;
-    height: 60vh;  /* or any other style for larger screens */
+    height: 60vh;   or any other style for larger screens 
   }
   
   @media (min-width: 900px) and (max-width: 1000px) {
     .service {
   width: 30%;
-  height: 60vh;  /* Example for a flex layout */
+  height: 60vh;  /* Example for a flex layout 
     }
   }
 
-  /* For screens more than 700px but less than 900px */
+  /* For screens more than 700px but less than 900px 
   @media (min-width: 700px) and (max-width: 899px) {
     .service {
   width: 40%;
-  height: 60vh;  /* Example for a flex layout */
+  height: 60vh;  /* Example for a flex layout 
     }
   }
   
-  /* For screens less than 400px */
+  /* For screens less than 400px 
   @media (max-width: 699px) {
     .service {
       width: 40%;
-      height: 60vh;  /* Example to hide the service div on very small screens */
+      height: 60vh;  /* Example to hide the service div on very small screens 
     }
-  }
+  } */
 
 /* Styling for navigation buttons */
 .nav-button {
@@ -298,7 +298,7 @@ src: url("font/Tropikal-Bold.ttf");
 .waviy {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-  font-size: 50px;
+  font-size: 40px;
 }
 
 @media (max-width: 450px) {
@@ -326,8 +326,4 @@ src: url("font/Tropikal-Bold.ttf");
   }
 }
 
-.message-area{
 
-height: 30vh;
-
-}

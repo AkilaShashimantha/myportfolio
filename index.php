@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="home">
+<body id="home" class=" p-0 m-0 ">
     
 <?php 
 include 'header.php';
@@ -17,13 +17,14 @@ include 'header.php';
 <div class=" container-fluid">
 <div class=" row">
 
-<div class="col-12 p-0 my-0" style=" background-color: black;">
+<div class="col-12 p-0 my-0 m-0 " style=" background-color: black; overflow: hidden;">
 
-<div class=" row ">
+<div class=" row">
 
-<div class="col-lg-6 col-12 my-0" style="background-image: linear-gradient(to left top, #000000, #140d11, #1e161d, #251e2b, #28283b);">
 
-<div class="col-12 d-flex justify-content-center waviy mt-3 my-5  " >
+<div class="col-lg-6 col-12 my-0 mx-0" style="background-image: linear-gradient(to left top, #000000, #140d11, #1e161d, #251e2b, #28283b);">
+
+<div class="col-12 d-flex justify-content-center waviy mt-3 my-5  p-0" >
 
 <span  style="--i:1">C</span>
    <span  style="--i:2">R</span>
@@ -51,14 +52,17 @@ include 'header.php';
 
 </div>
 
-<div class=" col-lg-6 col-12 d-flex justify-content-center p-2 mt-lg-0 " style=" background-image: linear-gradient(to right top, #000000, #140d11, #1e161d, #251e2b, #28283b);">
+<div class=" col-lg-6 col-12 d-flex justify-content-center mx-0 mt-lg-0 " style=" background-image: linear-gradient(to right top, #000000, #140d11, #1e161d, #251e2b, #28283b);">
 
 <div class=" col-10 col-lg-7 circle-image" >
 <!-- My Image -->
 </div>
 
 </div>
+
 </div>
+
+
 
 </div>
 
@@ -125,52 +129,62 @@ challenges and is eager to bring creative solutions as part of a team.</p>
 
 <!-- Services -->
 
-<div class="col-12 d-flex justify-content-center" style="background-image: linear-gradient(to bottom, #000000, #13090d, #1d1118, #261622, #2e1b2e);" id="services">
+<div class="col-12  p-0 m-0" style="background-image: linear-gradient(to bottom, #000000, #13090d, #1d1118, #261622, #2e1b2e); overflow: hidden;" id="services">
 
-<div class=" row d-flex justify-content-center services">
-<div class=" col-12 d-flex justify-content-center"><h2 style=" color: white;">My Services</h2></div>
-<!-- service card -->
-<div class="col-lg-2 col-6 col-md-4 d-flex justify-content-center my-5 p-2 service">
 <div class=" row">
 
-<div class="col-12 d-flex justify-content-center skill" ><h3 style=" color: white;">Web Design</h3></div>
+<div class=" col-12 d-flex justify-content-center " >
+<h2 class="" style=" color: white;">Services</h2>
+</div>
 
-<div class=" col-12 d-flex justify-content-center ">
+<!-- service card details  -->
+<div class=" col-6 col-lg-4 offset-lg-4 offset-3 my-3 service">
+
+<div class=" row">
+<div class=" col-12 d-flex justify-content-center skill">
+<h3 style=" color: white;">Web Development</h3>
+</div>
+<!-- card description -->
+<div class="col-12 d-flex justify-content-center">
 <p class="d-flex justify-content-center p-2" style=" color: #B4B4C4;">I'm currently design custom websites with HTMl,CSS,JavaScript,PHP and MySQl 
 and also make websites with WordPress Themes as your wish. I always try to do my level best to complete your wesite creatively.</p>
 </div>
+
 <div class=" col-12 mt-2 d-flex justify-content-center " style=" color: #B4B4C4;">
 <p>Let me to create your wonderful website</p>
 </div>
 
 </div>
+
 </div>
+
 </div>
+
 
 </div>
 
 <!-- Contact Me -->
 
 <div class=" col-12 d-flex justify-content-center " style=" background-color: black;" id="contactme">
-<div class=" row d-flex justify-content-center">
+<div class=" row ">
 
 <div class="col-12 d-flex justify-content-center"><h2 style=" color: white;">Contact Me</h2></div>
 
-<div class=" col-12 d-flex justify-content-center my-5" style=" background-color:#251e2b; border-radius: 20px;">
+<div class=" col-12  my-5" style=" background-color:#251e2b; border-radius: 20px;">
     
 <div class=" row">
 
 <form action="contactProcess.php" method="post">
 
-<div class=" col-12 d-flex justify-content-center my-3">
-    <div class=" col-5 col-lg-6"><label for="" class=" form-label text-white">Enter Your Email</label></div>
-   <div class=" col-lg-12 col-10"> <input type="email" name="email" id="email" class=" form-control text-center" placeholder="youremail@gmail.com" required></div>
-</div>
+
+    <div class=" col-12 "><label for="" class=" form-label text-white">Enter Your Email</label></div>
+   <div class=" col-12"> <input type="email" name="email" id="email" class=" form-control text-center" placeholder="youremail@gmail.com" required></div>
+
 <div class=" col-12 d-flex justify-content-center ">
 <div class=" col-12"><Label class=" form-label text-white">Enter Your Message</Label></div>
 </div>
 <div class=" col-12">
-<textarea name="message" id="message" class=" form-control message-area col-12 my-3" placeholder="Enter your message here" required></textarea>
+<textarea name="message" id="message" class=" form-control message-area col-12 my-3" placeholder="Enter your message here" rows="8" required></textarea>
 </div>
  <div class=" col-12 d-flex justify-content-center my-5"><button class=" btn btn-outline-primary col-8 col-lg-8" type="submit" name="send">Send</button></div>
 
