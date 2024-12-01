@@ -163,6 +163,66 @@ and also make websites with WordPress Themes as your wish. I always try to do my
 
 </div>
 
+<!-- My project -->
+
+<div class=" col-12 " style="background-image: radial-gradient(circle, #000000, #030203, #060406, #080709, #09090c);" >
+<div class=" row">
+
+<div class=" col-12 d-flex justify-content-center " >
+<h2 class="" style=" color: white;">My projects</h2>
+</div>
+
+<!-- project Cart -->
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+  <div class="col">
+    <div class="card">
+      <img src="images/web1.png" class="card-img-top" alt="..." style="height: 40vh;">
+      <div class="card-body">
+        <h5 class="card-title">Responsive Hospital Website</h5>
+        <p class="card-text">I create responsive Website for Hospital using Bootstrap framework with custome css, js, php. 
+            <br>This website is fully functional website</p>
+          <h5>GitHub Repository Link</h5> 
+          <a href="https://github.com/AkilaShashimantha/Hospital-Website-responsive-Website.git">Prime Care Hospital Link</a> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="col">
+    <div class="card">
+      <img src="images/java-img.png" class="card-img-top" alt="..." style="height: 40vh;">
+      <div class="card-body">
+        <h5 class="card-title">Student Management System </h5>
+        <p class="card-text">I created Student management System using java.All functions are working data stored in database.<br>
+    Display student count of every ech faculty, student details can Add,Update and Delete. Also lecture details and Subject details can Add, update and Delete<br>
+All CRUD functions are working properly</p>
+          <h5>GitHub Repository Link</h5> 
+          <a href="https://github.com/AkilaShashimantha/ITBIN-2211-0290.git">Student Management System Link</a> 
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card ">
+      <img src="images/salon-img.png" class="card-img-top" alt="..." style="height: 60vh;">
+      <div class="card-body">
+        <h5 class="card-title">Responsive Website for Salon</h5>
+        <p class="card-text">I create responsive Website for Salon using Bootstrap framework with custome css, js, php. 
+            <br>This website is fully functional website. Add contact form then send mail from it.</p>
+          <h5>GitHub Repository Link</h5> 
+          <a href="https://github.com/AkilaShashimantha/Responsive-Website-for-Salon.git">Salon Link</a> 
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+</div>
+</div>
+
+
 <!-- Contact Me -->
 
 <div class=" col-12 d-flex justify-content-center " style=" background-color: black;" id="contactme">
