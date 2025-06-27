@@ -42,8 +42,8 @@ if(!$mail->send()){
     $replyMail->IsSMTP();
     $replyMail->Host = 'smtp.gmail.com';
     $replyMail->SMTPAuth = true;
-    $replyMail->Username = 'akilashashimantha84@gmail.com';
-    $replyMail->Password = 'hcamruxxdjyqufuk';
+    $replyMail->Username = 'email';
+    $replyMail->Password = 'password'; // Replace with your actual password
     $replyMail->SMTPSecure = 'ssl';
     $replyMail->Port = 465;
 
@@ -51,7 +51,7 @@ if(!$mail->send()){
     $replyMail->addAddress($email); 
     $replyMail->isHTML(true);
     $replyMail->Subject = 'Thank you for contacting me!';
-    $replyMail->Body = "Hello, <br><br>Hello, <br><br>Thank you for reaching out! I have received your message and will get back to you shortly. I will reply shortly.<br><br>Best regards,<br>Akila Shashimantha";
+    $replyMail->Body = "Hello,<br><br>Thank you for reaching out! I have received your message and will get back to you shortly. I will reply shortly.<br><br>Best regards,<br>Akila Shashimantha";
 
 
     if ($replyMail->send()) {
