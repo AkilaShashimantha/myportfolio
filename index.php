@@ -58,6 +58,7 @@ include 'header.php';
    <span style="--i:4">A</span>
    <span style="--i:5">T</span>
    <span style="--i:6">E </span>
+   <span>_</span>
    <span style="--i:7">W</span>
    <span style="--i:8">E</span>
    <span style="--i:9">B</span>
@@ -128,12 +129,39 @@ challenges and is eager to bring creative solutions as part of a team.</p>
 <div class=" col-12 d-flex justify-content-center">
 <div class="row">
 <!-- Skills -->
-<div class=" col-12 d-flex justify-content-center skill" style=" color: #B4B4C4;">HTML & CSS</div>
-<div class=" col-12 d-flex justify-content-center skill"  style=" color: #B4B4C4;">JavaScript</div>
-<div class=" col-12 d-flex justify-content-center skill"  style=" color: #B4B4C4;">PHP</div>
-<div class=" col-12 d-flex justify-content-center skill"  style=" color: #B4B4C4;">MySQL</div>
-<div class=" col-12 d-flex justify-content-center skill"  style=" color: #B4B4C4;">Java</div>
-<div class=" col-12 d-flex justify-content-center skill"  style=" color: #B4B4C4;">Bootstrap</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-filetype-html me-2" title="HTML & CSS" style="color: #e44d26; background: #fff; border-radius: 4px; padding:2px;"></i> HTML &amp; CSS
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-filetype-js me-2" title="JavaScript" style="color: #f7df1e; background: #222; border-radius: 4px; padding:2px;"></i> JavaScript
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-filetype-php me-2" title="PHP" style="color: #8993be; background: #fff; border-radius: 4px; padding:2px;"></i> PHP
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-database me-2" title="MySQL" style="color: #00758f; background: #fff; border-radius: 4px; padding:2px;"></i> MySQL
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-cup-hot me-2" title="Java" style="color: #ea2d2e; background: #fff; border-radius: 4px; padding:2px;"></i> Java
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-bootstrap-fill me-2" title="Bootstrap" style="color: #7952b3; background: #fff; border-radius: 4px; padding:2px;"></i> Bootstrap
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-filetype-py me-2" title="Python" style="color: #3776ab; background: #fff; border-radius: 4px; padding:2px;"></i> Python
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-collection me-2" title="MongoDB" style="color: #47a248; background: #fff; border-radius: 4px; padding:2px;"></i> MongoDB
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-phone me-2" title="Flutter" style="color: #02569b; background: #fff; border-radius: 4px; padding:2px;"></i> Flutter
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-lightning me-2" title="Dart" style="color: #0175c2; background: #fff; border-radius: 4px; padding:2px;"></i> Dart
+</div>
+<div class="col-12 d-flex justify-content-center align-items-center skill" style="color: #F7E10A; font-weight: bold;">
+    <i class="bi bi-android2 me-2" title="Android Studio" style="color: #3ddc84; background: #fff; border-radius: 4px; padding:2px;"></i> Android Studio
+</div>
 
 </div>
 </div>
@@ -150,6 +178,14 @@ challenges and is eager to bring creative solutions as part of a team.</p>
 
 </div>
 </div>
+
+<div class="col-12 css-animation">
+    <div class="out_container">
+        <div class="ring"></div>
+        <div class="ring"></div>
+    </div>
+</div>
+
 
 <!-- Services -->
 
@@ -171,7 +207,7 @@ $services = Database::select("SELECT * FROM services");
 if (!empty($services)) {
   foreach ($services as $row) {
     ?>
-    <div class=" col-12 col-lg-4  m-2 service d-flex justify-content-center" style="height: 40vh;">
+    <div class="col-12 col-lg-4 m-2 service d-flex justify-content-center service-card" style="height: 40vh;">
       <div class="row w-100">
         <div class="col-12 d-flex flex-column align-items-center" >
           <h3 style="color: white; "><?php echo htmlspecialchars($row['title']); ?></h3>
@@ -214,27 +250,37 @@ if (!empty($services)) {
       ?>
           <div class="col">
               <div class="card h-100 project-card position-relative overflow-hidden">
-                  <img src="images/projects/<?php echo htmlspecialchars($proj['featured_image']); ?>" class="card-img-top" alt="Project Image" style="height: 40vh; object-fit:cover;">
-                  <div class="card-body d-flex flex-column">
-                      <h5 class="card-title"><?php echo htmlspecialchars($proj['name']); ?></h5>
-                      <p class="card-text short-desc"><?php echo htmlspecialchars($proj['short_description']); ?></p>
-                      <div class="full-desc d-none" style="color:#B4B4C4;">
-                          <?php echo nl2br(htmlspecialchars($proj['full_description'])); ?>
-                          <div class="mt-3 project-images-scroll" style="max-height:200px; overflow-x:auto; white-space:nowrap;">
-                              <?php if (!empty($proj['image1'])): ?>
-                                  <img src="images/projects/<?php echo htmlspecialchars($proj['image1']); ?>" class="img-fluid mb-2 me-2 d-inline-block project-thumb" style="max-height:180px; cursor:pointer;">
-                              <?php endif; ?>
-                              <?php if (!empty($proj['image2'])): ?>
-                                  <img src="images/projects/<?php echo htmlspecialchars($proj['image2']); ?>" class="img-fluid mb-2 me-2 d-inline-block project-thumb" style="max-height:180px; cursor:pointer;">
-                              <?php endif; ?>
-                              <?php if (!empty($proj['image3'])): ?>
-                                  <img src="images/projects/<?php echo htmlspecialchars($proj['image3']); ?>" class="img-fluid mb-2 d-inline-block project-thumb" style="max-height:180px; cursor:pointer;">
-                              <?php endif; ?>
-                          </div>
+                  <div class="card-inner">
+                  <!-- Front Side -->
+                  <div class="cover">
+                      <img src="images/projects/<?php echo htmlspecialchars($proj['featured_image']); ?>" class="card-img-top" alt="Project Image">
+                      <div class="card-body d-flex flex-column">
+                          <h5 class="card-title"><?php echo htmlspecialchars($proj['name']); ?></h5>
+                          <p class="card-text short-desc"><?php echo htmlspecialchars($proj['short_description']); ?></p>
                       </div>
-                      <a href="javascript:void(0);" class="read-more-link mt-auto" style="color:#007bff;">Read More</a>
-                      <h6 class="mt-3">GitHub Repository Link</h6>
-                      <a href="<?php echo htmlspecialchars($proj['github_link']); ?>" target="_blank"><?php echo htmlspecialchars($proj['github_link']); ?></a>
+                  </div>
+                  <!-- Back Side -->
+                  <div class="card-back">
+                      <h5><?php echo htmlspecialchars($proj['name']); ?></h5>
+                      <div style="color:#B4B4C4; font-size:0.95em;">
+                          <?php echo nl2br(htmlspecialchars($proj['full_description'])); ?>
+                      </div>
+                      <div class="mt-3 project-images-scroll" style="max-height:100px; overflow-x:auto; white-space:nowrap;">
+                          <?php if (!empty($proj['image1'])): ?>
+                              <img src="images/projects/<?php echo htmlspecialchars($proj['image1']); ?>" class="img-fluid mb-2 me-2 d-inline-block project-thumb" style="max-height:80px; cursor:pointer;">
+                          <?php endif; ?>
+                          <?php if (!empty($proj['image2'])): ?>
+                              <img src="images/projects/<?php echo htmlspecialchars($proj['image2']); ?>" class="img-fluid mb-2 me-2 d-inline-block project-thumb" style="max-height:80px; cursor:pointer;">
+                          <?php endif; ?>
+                          <?php if (!empty($proj['image3'])): ?>
+                              <img src="images/projects/<?php echo htmlspecialchars($proj['image3']); ?>" class="img-fluid mb-2 d-inline-block project-thumb" style="max-height:80px; cursor:pointer;">
+                          <?php endif; ?>
+                      </div>
+                      <div class="mt-2">
+                          <h6>GitHub Repository Link</h6>
+                          <a href="<?php echo htmlspecialchars($proj['github_link']); ?>" target="_blank" style="color:#0af;"><?php echo htmlspecialchars($proj['github_link']); ?></a>
+                      </div>
+                  </div>
                   </div>
               </div>
           </div>
@@ -348,7 +394,7 @@ document.querySelectorAll('.project-card').forEach(function(card) {
 
 
     <div class=" col-12 "><label for="" class=" form-label text-white">Enter Your Email</label></div>
-   <div class=" col-12"> <input type="email" name="email" id="email" class=" form-control text-center" placeholder="youremail@gmail.com" required></div>
+   <div class=" col-12"> <input type="email" name="email" id="email" class=" form-control text-center" placeholder="name@gmail.com" required></div>
 
 <div class=" col-12 d-flex justify-content-center ">
 <div class=" col-12"><Label class=" form-label text-white">Enter Your Message</Label></div>
@@ -379,43 +425,56 @@ $contact = $contact && count($contact) > 0 ? $contact[0] : null;
         <div class="col-12 px-0 mx-0">
             <div class="bg-dark text-white p-3 rounded-0 text-center m-0">
                 <h4 class="mb-3">Contact & Social Links</h4>
-                <div class="d-flex flex-wrap justify-content-center gap-3 m-0">
+                <div class="d-flex flex-wrap justify-content-center gap-4 m-0">
                     <?php if ($contact['email']): ?>
-                        <a href="mailto:<?php echo htmlspecialchars($contact['email']); ?>" class="text-white fs-4" title="Email">
-                            <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:<?php echo htmlspecialchars($contact['email']); ?>" class="icon-social bg-gradient text-white fs-1 rounded-circle d-flex align-items-center justify-content-center shadow" title="Email" style="width:70px; height:70px; background: linear-gradient(135deg, #222 60%, #f7e10a 100%); color: #f7e10a;">
+                            <i class="bi bi-envelope-fill" style="color: #f7e10a;"></i>
+                        </a>
                         </a>
                     <?php endif; ?>
                     <?php if ($contact['whatsapp']): ?>
-                        <a href="https://wa.me/<?php echo htmlspecialchars($contact['whatsapp']); ?>" class="text-success fs-4" title="WhatsApp" target="_blank">
+                        <a href="https://wa.me/<?php echo htmlspecialchars($contact['whatsapp']); ?>" class="icon-social bg-gradient bg-success text-white fs-1 rounded-circle d-flex align-items-center justify-content-center shadow" title="WhatsApp" target="_blank" style="width:70px; height:70px;">
                             <i class="bi bi-whatsapp"></i>
                         </a>
                     <?php endif; ?>
                     <?php if ($contact['instagram']): ?>
-                        <a href="<?php echo htmlspecialchars($contact['instagram']); ?>" class="text-danger fs-4" title="Instagram" target="_blank">
+                        <a href="<?php echo htmlspecialchars($contact['instagram']); ?>" class="icon-social bg-gradient bg-danger text-white fs-1 rounded-circle d-flex align-items-center justify-content-center shadow" title="Instagram" target="_blank" style="width:70px; height:70px;">
                             <i class="bi bi-instagram"></i>
                         </a>
                     <?php endif; ?>
                     <?php if ($contact['linkedin']): ?>
-                        <a href="<?php echo htmlspecialchars($contact['linkedin']); ?>" class="text-primary fs-4" title="LinkedIn" target="_blank">
+                        <a href="<?php echo htmlspecialchars($contact['linkedin']); ?>" class="icon-social bg-gradient bg-primary text-white fs-1 rounded-circle d-flex align-items-center justify-content-center shadow" title="LinkedIn" target="_blank" style="width:70px; height:70px;">
                             <i class="bi bi-linkedin"></i>
                         </a>
                     <?php endif; ?>
                     <?php if ($contact['facebook']): ?>
-                        <a href="<?php echo htmlspecialchars($contact['facebook']); ?>" class="text-primary fs-4" title="Facebook" target="_blank">
+                        <a href="<?php echo htmlspecialchars($contact['facebook']); ?>" class="icon-social bg-gradient bg-primary text-white fs-1 rounded-circle d-flex align-items-center justify-content-center shadow" title="Facebook" target="_blank" style="width:70px; height:70px;">
                             <i class="bi bi-facebook"></i>
                         </a>
                     <?php endif; ?>
                     <?php if ($contact['threads']): ?>
-                        <a href="<?php echo htmlspecialchars($contact['threads']); ?>" class="text-dark fs-4" title="Threads" target="_blank">
+                        <a href="<?php echo htmlspecialchars($contact['threads']); ?>" class="icon-social bg-gradient bg-dark text-white fs-1 rounded-circle d-flex align-items-center justify-content-center shadow" title="Threads" target="_blank" style="width:70px; height:70px;">
                             <i class="bi bi-threads"></i>
                         </a>
                     <?php endif; ?>
                     <?php if ($contact['github']): ?>
-                        <a href="<?php echo htmlspecialchars($contact['github']); ?>" class="text-light fs-4" title="GitHub" target="_blank">
+                        <a href="<?php echo htmlspecialchars($contact['github']); ?>" class="icon-social bg-gradient bg-secondary text-white fs-1 rounded-circle d-flex align-items-center justify-content-center shadow" title="GitHub" target="_blank" style="width:70px; height:70px;">
                             <i class="bi bi-github"></i>
                         </a>
                     <?php endif; ?>
                 </div>
+                <style>
+                .icon-social {
+                    transition: transform 0.2s, box-shadow 0.2s;
+                    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+                }
+                .icon-social:hover, .icon-social:focus {
+                    transform: scale(1.15) rotate(-6deg);
+                    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+                    z-index: 2;
+                    text-decoration: none;
+                }
+                </style>
             </div>
         </div>
     </div>

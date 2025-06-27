@@ -222,9 +222,8 @@
 
 /* Styling for navigation buttons */
 .nav-button {
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 10px 20px;
+    font-size: 1rem; /* Slightly smaller than default */
+    padding: 0.4rem 0.75rem;
     margin: 0 10px;
     text-transform: uppercase;
     background-color: transparent;
@@ -325,5 +324,164 @@ src: url("font/Tropikal-Bold.ttf");
     transform: translateY(-20px)
   }
 }
+
+/* ball animation */
+
+.service-card
+{
+  transform:
+    perspective(800px)
+    rotateY(25deg) scale(0.9)
+    rotateX(10deg);
+  filter: blur(0.5px);
+  opacity: 0.7;
+  transition: 0.6s ease all;
+}
+.service-card:hover
+{
+  transform:
+    perspective(800px)
+    rotateY(-15deg)
+    translateY(-50px)
+    rotateX(10deg)
+    scale(1);
+  filter: blur(0);
+  opacity: 1;
+}
+
+/* Add this at the end of your style.css */
+
+.project-card {
+  position: relative;
+  height: 400px;
+  min-width: 260px;
+  width: 100%;
+  perspective: 1200px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-bottom: 2rem;
+}
+.project-card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s cubic-bezier(.4,2.08,.55,.44);
+  transform-style: preserve-3d;
+}
+.project-card:hover .card-inner,
+.project-card.expanded .card-inner {
+  transform: rotateY(180deg);
+}
+.project-card .cover,
+.project-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.project-card .cover {
+  background: #181818;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.project-card .card-back {
+  background: #0b0f08;
+  color: #fff;
+  transform: rotateY(180deg);
+  z-index: 3;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.project-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.project-card .card-title,
+.project-card .card-text {
+  color: #fff;
+}
+.project-card,
+.project-card .card-inner,
+.project-card .cover,
+.project-card .card-back {
+  min-height: 400px;
+  height: 100%;
+}
+
+.project-card .card-body {
+  flex: 1 1 auto;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.css-animation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.out_container {
+    position: relative;
+    font-size: 1.5vw;
+    perspective: 10em;
+    transform-style: preserve-3d;
+    width: 10em;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ring {
+    position: absolute;
+    left: 0; top: 0;
+    transform-style: preserve-3d;
+    animation: ringmove 1s infinite linear;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.ring:nth-child(1) {
+    border: solid 1em hsl(240deg,100%,50%);
+    margin-top: -3em;
+}
+
+.ring:nth-child(2) {
+    border: solid 1em hsl(220deg,100%,70%);
+    margin-top: 3em;
+    animation-delay: -0.5s;
+}
+
+@keyframes ringmove {
+    0% { transform: rotateX(90deg) rotateZ(0deg) rotateX(30deg); }
+    100% { transform: rotateX(90deg) rotateZ(360deg) rotateX(30deg); }
+}
+
+@media (max-width: 576px) {
+  .nav-button {
+    font-size: 0.95rem; /* Even smaller on mobile */
+    padding: 0.35rem 0.6rem;
+  }
+}
+
+
 
 
